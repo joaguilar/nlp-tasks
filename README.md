@@ -34,6 +34,6 @@ pip install -r requirements.txt
 4. Run The Streamlit webapp
 
 ```
-streamlit nlpsamples.py
+streamlit run nlpsamples.py
 ```
 
