@@ -9,6 +9,13 @@ import csv
 import numpy as np
 import extra_streamlit_components as stx
 from scipy.special import softmax
+from numba import cuda
+
+def free_gpu_cache():
+    torch.cuda.empty_cache()
+    cuda.select_device(0)
+    cuda.close()
+    cuda.select_device(0)
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModelForSequenceClassification, pipeline, AutoModelForTokenClassification
 
@@ -88,10 +95,11 @@ with st.form(key="my_form"):
                 "⚠️ Your text has "
                 + str(res)
                 + " words."
-                + " Only the first 200 words will be considered."
+                + " Only the first 200 characters will be considered."
             )
 
-        text = doc[:MAX_WORDS]
+        # text = doc[:MAX_WORDS]
+        text=doc
 
     submit_button = st.form_submit_button(label="Run")
 
@@ -147,6 +155,6 @@ with st.spinner('Processing...'):
     st.header("")
 
     st.table(df.assign(hack='').set_index('hack'))
-    torch.cuda.empty_cache()
-
     st.markdown("## End")
+    if device == "cuda":
+        free_gpu_cache()

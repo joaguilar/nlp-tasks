@@ -1,0 +1,21 @@
+Masks:
+
+The [MASK] rules over his kingdom.
+
+Sentiment:
+Good morning, I love everybody!!
+--------------
+Here's a ridiculous result from the 
+GPT-2 paper (Table 13) that might get buried --- the model makes up an entire, coherent news article about TALKING UNICORNS, given only 2 sentences of context. 
+WHAT??!!
+------------
+Just want to put this news in plain language for people. 
+Senior people at Twitter have resigned in the last 48 hours. We now now why. They said in private Slack channels that is so desperate to recoup his money, he’s taking crazy risks with YOUR privacy and safety.
+
+NER:
+A 28-year-old female with a history of gestational diabetes mellitus diagnosed eight years prior to presentation and subsequent type two diabetes mellitus ( T2DM ), one prior episode of HTG-induced pancreatitis three years prior to presentation , and associated with an acute hepatitis , presented with a one-week history of polyuria , poor appetite, and vomiting.  She was on metformin, glipizide, and dapagliflozin for T2DM and atorvastatin and gemfibrozil for HTG . She had been on dapagliflozin for six months at the time of presentation. Physical examination on presentation was significant for dry oral mucosa ; significantly , her abdominal examination was benign with no tenderness , guarding , or rigidity. Pertinent laboratory findings on admission were : serum glucose 111 mg/dl ,  creatinine 0.4 mg/dL , triglycerides 508 mg/dL , total cholesterol 122 mg/dL , and venous pH 7.27 ..
+---------------
+The patient reported no recurrence of palpitations at follow-up 6 months after the ablation.
+-----------------
+CASE: A 28-year-old previously healthy man presented with a 6-week history of palpitations. The symptoms occurred during rest, 2–3 times per week, lasted up to 30 minutes at a time and were associated with dyspnea.
+Except for a grade 2/6 holosystolic tricuspid regurgitation murmur (best heard at the left sternal border with inspiratory accentuation), physical examination yielded unremarkable findings.

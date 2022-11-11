@@ -1,4 +1,5 @@
 import torch
+import numba
 import random
 import streamlit as st
 from pandas import DataFrame
@@ -9,6 +10,14 @@ import csv
 import numpy as np
 import extra_streamlit_components as stx
 from scipy.special import softmax
+from numba import cuda
+
+def free_gpu_cache():
+    torch.cuda.empty_cache()
+    cuda.select_device(0)
+    cuda.close()
+    cuda.select_device(0)
+
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModelForSequenceClassification, pipeline, AutoModelForTokenClassification
 
@@ -86,4 +95,6 @@ with st.spinner('Processing...'):
         """)
 
     st.markdown("## End")
-    torch.cuda.empty_cache()
+    if device == "cuda":
+        free_gpu_cache()
+    
