@@ -74,6 +74,10 @@ if not submit_button:
 
 with st.spinner('Processing...'):
     # ner = pipeline("ner", model=model_ner, tokenizer=tokenizer_ner,device=0)
+    device_num = -1 # CPU
+    if device == "cuda":
+        device_num = 0 #GPU w/CUDA
+
     ner = pipeline("ner", model=modelo, tokenizer=tokenizer,device=0, aggregation_strategy="simple")
     ner_results = ner(text)
     print(ner_results)

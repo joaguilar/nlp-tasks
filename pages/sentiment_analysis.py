@@ -10,6 +10,8 @@ import numpy as np
 import extra_streamlit_components as stx
 from scipy.special import softmax
 from numba import cuda
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 def free_gpu_cache():
     torch.cuda.empty_cache()
